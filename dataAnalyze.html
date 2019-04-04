@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body style="height: 100%; margin: 0;background:#060B29">
+    <main>
+        <article>
+            <section class="info">
+                <span class="border row1"></span>
+                <span class="border row2"></span>
+                <span class="border col1"></span>
+                <span class="border col2"></span>
+                <div id="info">
+                    截止2019年2月，全区全年共计城市管理案件&nbsp;
+                    <span class="go-red">88750</span>&nbsp;件，
+                    便民事项&nbsp;<span class="go-red">13562</span>&nbsp;件;
+                    其中<span class="go-blue">暴露垃圾、共享单车、废弃家具</span>
+                    设备高发<span class="go-blue">前三</span>
+                    无照经营游商类案件在本月中增幅最大，环比增长
+                    <span class="go-red">42.15</span>&nbsp;%。
+
+                </div>
+            </section>
+            <section class="checkPie">
+                <span class="border row1"></span>
+                <span class="border row2"></span>
+                <span class="border col1"></span>
+                <span class="border col2"></span>
+                <div id="checkPie"></div>
+            </section>
+        </article>
+        <article>
+            <aside>
+                <figure></figure>
+                <figure></figure>
+                <figure></figure>
+            </aside>
+        </article>
+        <article>
+            <section></section>
+            <section></section>
+        </article>
+    </main>
+    <!-- 底部city的两个图表 -->
+    <footer>
+        <section class="cityLine">
+            <span class="border row1"></span>
+            <span class="border row2"></span>
+            <span class="border col1"></span>
+            <span class="border col2"></span>
+            <div id="cityLine"></div>
+        </section>
+        <section class="cityBar">
+            <span class="border row1"></span>
+            <span class="border row2"></span>
+            <span class="border col1"></span>
+            <span class="border col2"></span>
+            <div id="cityBar"></div>
+        </section>
+    </footer>
+    <link rel="stylesheet" href="./borderStyle.css">
+    <style>
+        .cityLine,
+        .cityBar {
+            width: 48%;
+            height: 85%;
+        }
+
+        .info {
+            width: 100%;
+            height: 40%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #info {
+            color: #738BAD;
+            font-size: 18px;
+            width: 80%;
+            line-height: 36px;
+            padding-top: 10px;
+            text-indent: 20px;
+            font-family: SimHei;
+        }
+        .go-red {
+            color: #A83263;
+            font-style: italic;
+            text-decoration: underline;
+            font-size: 24px;
+        }
+        .go-blue {
+            color: #2677BC;
+
+        }
+
+        .checkPie {
+            width: 100%;
+            height: 53%;
+        }
+    </style>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+    <script src="./cityBar.js"></script>
+    <script src="./cityLine.js"></script>
+    <script src="./checkPie.js"></script>
+</body>
+
+</html>
