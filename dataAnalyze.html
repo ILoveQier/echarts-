@@ -33,15 +33,29 @@
             </section>
         </article>
         <article>
-            <aside>
-                <figure></figure>
-                <figure></figure>
-                <figure></figure>
+            <aside class="figureTop">
+                <div id="figureOne"></div>
+            </aside>
+            <aside class="figureBottom">
+                <div id="figureTwo"></div>
+                <div id="figureThree"></div>
             </aside>
         </article>
         <article>
-            <section></section>
-            <section></section>
+            <section class="circleCase">
+                <span class="border row1"></span>
+                <span class="border row2"></span>
+                <span class="border col1"></span>
+                <span class="border col2"></span>
+                <div id="circleCase"></div>
+            </section>
+            <section class="envIssue">
+                <span class="border row1"></span>
+                <span class="border row2"></span>
+                <span class="border col1"></span>
+                <span class="border col2"></span>
+                <div id="envIssue"></div>
+            </section>
         </article>
     </main>
     <!-- 底部city的两个图表 -->
@@ -69,6 +83,34 @@
             height: 85%;
         }
 
+        .circleCase {
+            width: 100%;
+            height: 40%;
+        }
+
+        .envIssue {
+            width: 100%;
+            height: 55%;
+        }
+
+        .figureTop {
+            width: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #060B29;
+        }
+
+        .figureBottom {
+            width: 100%;
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #060B29;
+        }
+
         .info {
             width: 100%;
             height: 40%;
@@ -85,15 +127,16 @@
             text-indent: 20px;
             font-family: SimHei;
         }
+
         .go-red {
             color: #A83263;
             font-style: italic;
             text-decoration: underline;
             font-size: 24px;
         }
+
         .go-blue {
             color: #2677BC;
-
         }
 
         .checkPie {
@@ -114,6 +157,9 @@
     <script src="./cityBar.js"></script>
     <script src="./cityLine.js"></script>
     <script src="./checkPie.js"></script>
+    <script src="./figureOne.js"></script>
+    <script src="./figureTwo.js"></script>
+    <script src="./figureThree.js"></script>
 </body>
 
 </html>
