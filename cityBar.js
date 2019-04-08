@@ -28,11 +28,9 @@ option = {
   },
   xAxis: {
     data: dataAxis,
-    nameRotate: 45,
     show: true,
     boundaryGap: ['20%', '20%'],
     axisLabel: {
-      // inside: true,
       textStyle: {
         color: '#979BA6',
         fontWeight: 'bold',

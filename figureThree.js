@@ -3,6 +3,10 @@ var myChart = echarts.init(figureThree);
 var app = {};
 option = null;
 option = {
+  tooltip: {
+    trigger: 'item',
+    formatter: "{c}%"
+  },
   legend: {
     show: true,
     right: '30%',
