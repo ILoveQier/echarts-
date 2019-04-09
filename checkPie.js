@@ -1,5 +1,5 @@
 var checkPie = document.getElementById("checkPie");
-var myChart = echarts.init(checkPie);
+var checkPie = echarts.init(checkPie);
 var app = {};
 option = null;
 var data = genData(50);
@@ -11,15 +11,14 @@ option = {
   legend: {
     type: 'scroll',
     orient: 'vertical',
-    right: 40,
-    top: '15%',
-    bottom: 20,
+    right: '5%',
+    bottom: '15%',
     icon: 'circle',
-    itemHeight: 14,
-    itemWidth: 35,
-    itemGap: 20,
+    itemHeight: setFontSize(14),
+    itemWidth: setFontSize(35),
+    itemGap: setFontSize(20),
     textStyle: {
-      fontSize: 14,
+      fontSize: setFontSize(14),
       color: '#7F7D88'
     },
     data: data.legendData,
@@ -34,9 +33,9 @@ option = {
         show: false
       },
       itemStyle: {
-        color: '#111E3E'
+        color: '#111E3E',
       },
-      silent:true
+      silent: true
     },
     {
       type: 'pie',
@@ -48,7 +47,8 @@ option = {
       },
       label: {
         position: 'inside',
-        formatter: '{c}%'
+        formatter: '{c}%',
+        fontSize: setFontSize(12)
       },
       itemStyle: {
         emphasis: {
@@ -86,5 +86,5 @@ function genData(count) {
   };
 };
 if (option && typeof option === "object") {
-  myChart.setOption(option, true);
+  checkPie.setOption(option, true);
 }

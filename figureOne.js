@@ -1,5 +1,5 @@
 var figureOne = document.getElementById("figureOne");
-var myChart = echarts.init(figureOne);
+var figureOne = echarts.init(figureOne);
 var app = {};
 option = null;
 option = {
@@ -9,10 +9,11 @@ option = {
   title: {
     show: true,
     text: '单位：万/个',
-    right: 110,
-    bottom: 40,
+    right: '10%',
+    bottom: '10%',
     textStyle: {
-      color: '#7E808E'
+      color: '#7E808E',
+      fontSize: setFontSize(20),
     }
   },
   series: [
@@ -41,7 +42,7 @@ option = {
         }
       },
       axisLabel: {
-        fontSize: 16,
+        fontSize: setFontSize(16),
         color: '#fff',
         distance: 5,
         formatter: function (value) {
@@ -58,7 +59,7 @@ option = {
         shadowBlur: 30
       },
       detail: {
-        fontSize: 46,
+        fontSize: setFontSize(46),
         formatter: '{value}',
         color: '#4186D7',
         offsetCenter: [0, '70%'],
@@ -69,7 +70,7 @@ option = {
       title: {
         offsetCenter: [0, '34%'],
         color: '#fff',
-        fontSize: 22
+        fontSize: setFontSize(22),
       }
     },
     {
@@ -92,13 +93,14 @@ option = {
           value: 48960,
           itemStyle: {
             normal: {
-              color: "#4195F2"
+              color: "#4195F2",
+              fontSize: setFontSize(22),
             }
           }
         },
         {
           // 饼图需要按照圆环的总长度减去现有长度
-          value: 80000*(1+1/9) - 48960,
+          value: 80000 * (1 + 1 / 9) - 48960,
           itemStyle: {
             normal: {
               color: "rgba(35,206,167,0)"
@@ -112,5 +114,5 @@ option = {
 };
 
 if (option && typeof option === "object") {
-  myChart.setOption(option, true);
+  figureOne.setOption(option, true);
 }

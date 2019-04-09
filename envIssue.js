@@ -1,5 +1,5 @@
 var envIssue = document.getElementById("envIssue");
-var myChart = echarts.init(envIssue);
+var envIssue = echarts.init(envIssue);
 var app = {};
 option = null;
 
@@ -15,7 +15,9 @@ option = {
     right: 10,
     top: 10,
     textStyle: {
-      color: '#fff'
+      color: '#fff',
+      fontSize: setFontSize(12),
+
     },
     width:150,
     itemWidth:10,
@@ -29,6 +31,7 @@ option = {
     top: 20,
     left: 20,
     textStyle: {
+      fontSize: setFontSize(14),
       color: '#3C8ADD'
     }
   },
@@ -61,8 +64,9 @@ option = {
       show: false,
     },
     axisLabel: {
-      margin: 20,
+      margin: 10,
       rotate: 45,
+      fontSize: setFontSize(10),
       formatter: (v) => {
         return v * 1000
       },
@@ -78,7 +82,7 @@ option = {
     },
     axisLabel: {
       color: '#fff',
-      fontSize: 14,
+      fontSize: setFontSize(14),
       margin: 20,
     }
   },
@@ -106,5 +110,5 @@ option = {
 };
 
 if (option && typeof option === "object") {
-  myChart.setOption(option, true);
+  envIssue.setOption(option, true);
 }

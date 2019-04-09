@@ -1,6 +1,7 @@
 var circelCase = document.getElementById("circleCase");
-var myChart = echarts.init(circelCase);
+var circelCase = echarts.init(circelCase);
 option = null;
+
 option = {
   title: {
     text: '案件循环分类占比',
@@ -8,7 +9,7 @@ option = {
     y: 15,
     textStyle: {
       color: '#2D7CD3',
-      fontSize: 16,
+      fontSize: setFontSize(16),
       fontWeight: 'bold'
     }
   },
@@ -24,7 +25,7 @@ option = {
     itemGap: 20,
     textStyle: {
       color: '#fff',
-      fontSize: 16,
+      fontSize: setFontSize(16),
       padding: [0, 0, 0, 10]
     },
     data: ['大循环案件', '小循环案件', '微循环案件']
@@ -38,15 +39,16 @@ option = {
       avoidLabelOverlap: false,
       label: {
         normal: {
-          color:'#fff',
+          color: '#fff',
           formatter: '{c}%',
+          fontSize: setFontSize(12),
           verticalAlign: 'top',
         },
       },
       labelLine: {
         normal: {
           show: true,
-          color:'#fff'
+          color: '#fff'
         }
       },
       data: [
@@ -59,5 +61,5 @@ option = {
 };
 
 if (option && typeof option === "object") {
-  myChart.setOption(option, true);
+  circelCase.setOption(option, true);
 }

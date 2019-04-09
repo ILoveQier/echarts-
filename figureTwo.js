@@ -1,5 +1,5 @@
 var figureTwo = document.getElementById("figureTwo");
-var myChart = echarts.init(figureTwo);
+var figureTwo = echarts.init(figureTwo);
 var app = {};
 option = null;
 option = {
@@ -9,11 +9,11 @@ option = {
   title: {
     show: true,
     text: '单位：小时',
-    bottom: 5,
-    right: '35%',
+    bottom: '2%',
+    right: '34%',
     textStyle: {
       color: '#7E808E',
-      fontSize: 14,
+      fontSize: setFontSize(14),
     }
   },
   series: [
@@ -42,7 +42,7 @@ option = {
         }
       },
       axisLabel: {
-        fontSize: 12,
+        fontSize: setFontSize(12),
         color: '#fff',
         distance: -5,
         formatter: function (value) {
@@ -59,19 +59,19 @@ option = {
         shadowBlur: 30
       },
       detail: {
-        fontSize: 24,
+        fontSize: setFontSize(24),
         formatter: '{value}',
         color: '#4186D7',
         offsetCenter: [0, '70%'],
         textShadowColor: '#4186D7',
         textShadowBlur: 20,
-        fontWeight:'bold'
+        fontWeight: 'bold'
       },
       data: [{ value: 17, name: '存续时间' }],
       title: {
         offsetCenter: [0, '40%'],
         color: '#fff',
-        fontSize: 16
+        fontSize: setFontSize(16),
       }
     },
     {
@@ -100,7 +100,7 @@ option = {
         },
         {
           // 饼图需要按照圆环的总长度减去现有长度
-          value: 80*(1+1/12) - 17,
+          value: 80 * (1 + 1 / 12) - 17,
           itemStyle: {
             normal: {
               color: "rgba(35,206,167,0)"
@@ -114,5 +114,5 @@ option = {
 };
 
 if (option && typeof option === "object") {
-  myChart.setOption(option, true);
+  figureTwo.setOption(option, true);
 }

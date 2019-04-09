@@ -1,5 +1,5 @@
 var cityBar = document.getElementById("cityBar");
-var myChart = echarts.init(cityBar);
+var cityBar = echarts.init(cityBar);
 var app = {};
 option = null;
 var dataAxis = ['新北桥', '永定门外', '和平里', '安定路', '马甸', '新北桥', '永定门外', '和平里', '安定路', '马甸', '新北桥', '永定门外', '和平里', '安定路', '马甸', '新北桥', '永定门外']
@@ -17,13 +17,14 @@ option = {
     top: 20,
     left: 20,
     textStyle: {
+      fontSize: setFontSize(16),
       color: '#3C8ADD'
     }
   },
   grid: {
     // show: true,
     width: '86%',
-    height: '50%',
+    height: '40%',
     top: '75',
   },
   xAxis: {
@@ -34,6 +35,7 @@ option = {
       textStyle: {
         color: '#979BA6',
         fontWeight: 'bold',
+        fontSize: setFontSize(12),
       },
       rotate: 45,
       margin: 20
@@ -58,7 +60,7 @@ option = {
       textStyle: {
         color: '#979BA6',
         fontWeight: 'bold',
-        fontSize: 14
+        fontSize: setFontSize(12)
       },
       formatter: v => {
         return v ? v + 'k' : v
@@ -119,5 +121,5 @@ option = {
 //     });
 // });;
 if (option && typeof option === "object") {
-  myChart.setOption(option, true);
+  cityBar.setOption(option, true);
 }

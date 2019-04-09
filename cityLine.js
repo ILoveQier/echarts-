@@ -1,5 +1,5 @@
 var cityLine = document.getElementById("cityLine");
-var myChart = echarts.init(cityLine);
+var cityLine = echarts.init(cityLine);
 var xData = []
 for (let index = 1; index < 29; index++) {
   xData.push(index)
@@ -12,7 +12,8 @@ option = {
     top: 20,
     left: 20,
     textStyle: {
-      color: '#3C8ADD'
+      color: '#3C8ADD',
+      fontSize: setFontSize(14),
     }
   },
   tooltip: {
@@ -21,7 +22,7 @@ option = {
   color: ['#4769E6', '#C53C6D', '#5DC3C7'],
   legend: {
     textStyle: {
-      fontSize: 14,
+      fontSize: setFontSize(12),
       color: '#7F7D88'
     },
     top: 20,
@@ -43,7 +44,7 @@ option = {
   grid: {
     // show: true,
     width: '86%',
-    height: '60%',
+    height: '50%',
     top: '75',
   },
   xAxis: {
@@ -59,6 +60,8 @@ option = {
       textStyle: {
         color: '#979BA6',
         fontWeight: 'bold',
+      fontSize: setFontSize(12),
+
       },
       margin: 15
     },
@@ -87,7 +90,7 @@ option = {
       textStyle: {
         color: '#979BA6',
         fontWeight: 'bold',
-        fontSize: 14
+        fontSize: setFontSize(12),
       },
       align: 'left',
       margin: 50
@@ -122,5 +125,5 @@ option = {
 };
 ;
 if (option && typeof option === "object") {
-  myChart.setOption(option, true);
+  cityLine.setOption(option, true);
 }

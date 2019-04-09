@@ -1,5 +1,5 @@
 var figureThree = document.getElementById("figureThree");
-var myChart = echarts.init(figureThree);
+var figureThree = echarts.init(figureThree);
 var app = {};
 option = null;
 option = {
@@ -16,14 +16,15 @@ option = {
     textStyle: {
       color: '#848591',
       fontWeight: 'bold',
+      fontSize: setFontSize(14),
     },
-    itemGap:20
+    itemGap: 20
   },
   xAxis: {
     type: 'category',
-    data: [1,1],
+    data: [1, 1],
     axisLabel: {
-      show:false
+      show: false
     }
   },
   yAxis: {
@@ -38,7 +39,7 @@ option = {
       textStyle: {
         color: '#979BA6',
         fontWeight: 'bold',
-        fontSize: 14,
+        fontSize: setFontSize(14),
         margin: 10,
         verticalAlign: 'middle',
       },
@@ -59,8 +60,8 @@ option = {
     {
       name: '同比',
       type: 'bar',
-      barWidth: '35',
-      barGap:'150%',
+      barWidth: '30%',
+      barGap: '70%',
       itemStyle: {
         normal: {
           color: '#456AEC',
@@ -72,7 +73,7 @@ option = {
     {
       name: '环比',
       type: 'bar',
-      barWidth: '35',
+      barWidth: '30%',
       itemStyle: {
         normal: {
           color: '#ED3770',
@@ -86,5 +87,5 @@ option = {
 
 
 if (option && typeof option === "object") {
-  myChart.setOption(option, true);
+  figureThree.setOption(option, true);
 }
